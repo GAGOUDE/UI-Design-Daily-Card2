@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+body {
+    background-color: #2F3550;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* CARD LEFT */
+.card-left {
+    margin-right: 30px;
+}
+
+.box-1 {
+    background-color: #4265E2;
+    width: 400px;
+    height: 180px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px #000;
+    animation: left 1s ease;
+    padding: 40px;
+}
+
+@keyframes left {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.box-1 h3 {
+    padding-bottom: 20px;
+}
+
+.box-1 p {
+    display: inline-block;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.699);
+}
+
+.box-1 i {
+    font-size: 25px;
+    position: absolute;
+    margin-left: 40px;
+}
+
+.box-2 {
+    background-color: #4265E2;
+    width: 400px;
+    height: 180px;
+    border-radius: 5px;
+    margin-top: 30px;
+    box-shadow: 1px 2px 6px rgba(0,0,0,0.4);
+    animation: bottom 1.5s ease;
+}
+
+@keyframes bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.box-2 h3 {
+    padding: 40px 0 20px 40px;
+}
+
+.box-2 .fa-home,
+.box-2 .fa-laptop {
+    padding: 0 0 20px 30px;
+    color: rgba(255, 255, 255, 0.699);
+    margin-right: 5px;
+}
+
+.box-2 a {
+    color: rgba(255, 255, 255, 0.699);
+}
+
+.box-2 i {
+    margin-left: 10px;
+}
+
+/* CARD RIGHT */
+.card-right {
+    background-color: #4265E2;
+    width: 430px;
+    height: 390px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px #000;
+    animation: top 1.5s ease;
+}
+
+@keyframes top {
+    0% {
+        opacity: 0;
+        transform: translateY(-120px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(-180deg) rotate(-180deg);
+    }
+}
+
+img {
+    cursor: pointer;
+    width: 310px;
+    height: 180px;
+    border-radius: 5px;
+    margin: 35px auto 0 60px;
+    transition: .3s ease-in-out;
+}
+
+img:hover {
+    filter: grayscale(1);
+    transform: scale(1.2);
+}
+
+.card-right-description {
+    margin: 20px 0 20px 60px;
+}
+
+.card-right-description p {
+    color: rgba(255, 255, 255, 0.699);
+    padding: 15px 0;
+}
+
+button {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 26px;
+    font-family: inherit;
+    font-size: 16px;
+    box-shadow: 0 2px 3px #000;
+}
+
+button:hover {
+    background-color: rgb(16, 16, 83);
+}
+
+/* Footer */
+footer {
+    margin: 30px auto;
+}
+
+.attribution {
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+.attribution a {
+    color: hsl(46, 70%, 58%);
+}
+
+/* RESPONSIVE */
+@media(max-width: 865px) {
+    .content {
+        height: 800px;
+    }
+
+    .container{
+        margin-top: 100px;
+    }
+    .card-left{
+        margin-top: 100px;
+    }
+
+    .card-right {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 426px){
+    .card-left{
+        margin: 250px 0 0 0;
+    }
+
+    .card-right {
+        width: 400px;
+    }
+
+    img{
+        margin-left: 45px;
+    }
+
+    .card-right-description{
+        margin-left: 45px;
+    }
+}
+
+@media(max-width: 376px) {
+    .box-1{
+        width: 360px;
+        height: 160px;
+        padding: 20px;
+    }
+
+    .box-2{
+        width: 360px;
+    }
+
+    .card-right {
+        width: 360px;
+    }
+
+    img{
+        margin-left: 25px;
+    }
+
+    .card-right-description{
+        margin-left: 25px;
+    }
+}
+
+@media(max-width: 321px) {
+    .box-1 {
+        width: 305px;
+        padding: 20px;
+    }
+
+    .box-1 p{
+        width: 200px;
+    }
+
+    .box-2 {
+         width: 305px;
+    }
+
+    .card-right {
+         width: 305px;
+    }
+
+    .card-right-description{
+        margin-left: 20px;
+    }
+
+    img{
+        margin-left: 20px;
+        width: 270px;
+    }
+}
